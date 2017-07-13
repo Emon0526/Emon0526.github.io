@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>外边距合并 | Hexo</title>
+  <title>快速排序的实现 | Hexo</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,16 +15,16 @@
     <meta name="keywords" content="前端,html,css,JavaScript,nodejs" />
   
 
-  <meta name="description" content="相邻兄弟元素 父元素和子元素 空元素">
+  <meta name="description" content="快速排序 定义一个 quickSort 函数，它的参数是一个数组。 检查数组的元素个数，如果小于等于 1，就返回。 选择 “基准”（pivot），并将其与原数组分离，再定义两个空数组，用来存放一左一右的两个子集。 开始遍历数组，小于 “基准” 的元素放入左边的子集，大于基准的元素放入右边的子集。 使用递归不断重复这个过程，就可以得到排序后的数组。 使用的时候，直接调用 quickSort()">
 <meta property="og:type" content="article">
-<meta property="og:title" content="外边距合并">
-<meta property="og:url" content="http://yoursite.com/2017/07/13/外边距合并/index.html">
+<meta property="og:title" content="快速排序的实现">
+<meta property="og:url" content="http://yoursite.com/2017/07/13/快速排序的实现/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="相邻兄弟元素 父元素和子元素 空元素">
-<meta property="og:updated_time" content="2017-07-13T02:21:39.000Z">
+<meta property="og:description" content="快速排序 定义一个 quickSort 函数，它的参数是一个数组。 检查数组的元素个数，如果小于等于 1，就返回。 选择 “基准”（pivot），并将其与原数组分离，再定义两个空数组，用来存放一左一右的两个子集。 开始遍历数组，小于 “基准” 的元素放入左边的子集，大于基准的元素放入右边的子集。 使用递归不断重复这个过程，就可以得到排序后的数组。 使用的时候，直接调用 quickSort()">
+<meta property="og:updated_time" content="2017-07-13T06:42:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="外边距合并">
-<meta name="twitter:description" content="相邻兄弟元素 父元素和子元素 空元素">
+<meta name="twitter:title" content="快速排序的实现">
+<meta name="twitter:description" content="快速排序 定义一个 quickSort 函数，它的参数是一个数组。 检查数组的元素个数，如果小于等于 1，就返回。 选择 “基准”（pivot），并将其与原数组分离，再定义两个空数组，用来存放一左一右的两个子集。 开始遍历数组，小于 “基准” 的元素放入左边的子集，大于基准的元素放入右边的子集。 使用递归不断重复这个过程，就可以得到排序后的数组。 使用的时候，直接调用 quickSort()">
 
   
 
@@ -137,12 +137,17 @@
 </div>
 
 
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#快速排序"><span class="toc-text">快速排序</span></a></li></ol>
+  </div>
+
 
 
 <div class="content content-post CENTER">
-   <article id="post-外边距合并" class="article article-type-post" itemprop="blogPost">
+   <article id="post-快速排序的实现" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">外边距合并</h1>
+    <h1 class="post-title">快速排序的实现</h1>
 
     <div class="article-meta">
       <span>
@@ -163,7 +168,7 @@
       
         <span>
           <i class="icon-comment"></i>
-          <a href="http://emon0526.github.io/2017/07/13/外边距合并/#disqus_thread"></a>
+          <a href="http://emon0526.github.io/2017/07/13/快速排序的实现/#disqus_thread"></a>
         </span>
       
 
@@ -182,13 +187,15 @@
 
   <div class="article-content">
     
-      <ul>
-<li>相邻兄弟元素</li>
-<li>父元素和子元素</li>
-<li>空元素</li>
-</ul>
-<hr>
-
+      <h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><ol>
+<li>定义一个 quickSort 函数，它的参数是一个数组。</li>
+<li>检查数组的元素个数，如果小于等于 1，就返回。</li>
+<li>选择 “基准”（pivot），并将其与原数组分离，再定义两个空数组，用来存放一左一右的两个子集。</li>
+<li>开始遍历数组，小于 “基准” 的元素放入左边的子集，大于基准的元素放入右边的子集。</li>
+<li>使用递归不断重复这个过程，就可以得到排序后的数组。</li>
+<li>使用的时候，直接调用 quickSort() </li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line"></div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</div><div class="line">    &lt;title&gt;&lt;/title&gt;</div><div class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;&quot;&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">    var quickSort = function(arr) &#123;</div><div class="line">        if (arr.length &lt;= 1) &#123;</div><div class="line">            return arr;</div><div class="line">        &#125;</div><div class="line">        var pivotIndex = Math.floor(arr.length / 2);</div><div class="line">        var pivot = arr.splice(pivotIndex, 1)[0];</div><div class="line">        var left = [];</div><div class="line">        var right = [];</div><div class="line">        for (var i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">            if (arr[i] &lt; pivot) &#123;</div><div class="line">                left.push(arr[i]);</div><div class="line">            &#125; else &#123;</div><div class="line">                right.push(arr[i]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return quickSort(left).concat([pivot], quickSort(right));</div><div class="line">    &#125;;</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
     
   </div>
 </article>
@@ -218,10 +225,10 @@
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2017/06/22/test/">
+    <a class="show pull-left" href="/2017/07/13/外边距合并/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2017/07/13/快速排序的实现/">
+    <a class="hide pull-right" href="/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
@@ -302,7 +309,7 @@
   <script>
     var disqus_shortname = 'forsigner';
     
-    var disqus_url = 'http://yoursite.com/2017/07/13/外边距合并/';
+    var disqus_url = 'http://yoursite.com/2017/07/13/快速排序的实现/';
     
     (function(){
       var dsq = document.createElement('script');
