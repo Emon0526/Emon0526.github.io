@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>css居中 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="前端,html,css,JavaScript,nodejs" />
+  
+
+  <meta name="description" content="开发过程中，经常会遇到需要居中（水平居中、垂直居中、水平 + 垂直居中）的情况。 主要有以下几种：  水平居中：内联元素（inline） 水平居中：单个块级元素（block） 水平居中：多个块级元素 水平居中：多个块级元素（使用 flexbox 布局来解决） 垂直居中：单行的内联元素 垂直居中：多行的内联元素 垂直居中：已知高度的块级元素 垂直居中：未知高度的块级元素 水平垂直居中：已知高度和宽度">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css居中">
+<meta property="og:url" content="http://yoursite.com/2017/12/08/css居中/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="开发过程中，经常会遇到需要居中（水平居中、垂直居中、水平 + 垂直居中）的情况。 主要有以下几种：  水平居中：内联元素（inline） 水平居中：单个块级元素（block） 水平居中：多个块级元素 水平居中：多个块级元素（使用 flexbox 布局来解决） 垂直居中：单行的内联元素 垂直居中：多行的内联元素 垂直居中：已知高度的块级元素 垂直居中：未知高度的块级元素 水平垂直居中：已知高度和宽度">
+<meta property="og:updated_time" content="2017-12-08T08:38:59.205Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css居中">
+<meta name="twitter:description" content="开发过程中，经常会遇到需要居中（水平居中、垂直居中、水平 + 垂直居中）的情况。 主要有以下几种：  水平居中：内联元素（inline） 水平居中：单个块级元素（block） 水平居中：多个块级元素 水平居中：多个块级元素（使用 flexbox 布局来解决） 垂直居中：单行的内联元素 垂直居中：多行的内联元素 垂直居中：已知高度的块级元素 垂直居中：未知高度的块级元素 水平垂直居中：已知高度和宽度">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#水平居中"><span class="toc-text">水平居中</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#内联元素"><span class="toc-text">内联元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单个块级元素"><span class="toc-text">单个块级元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多个块级元素"><span class="toc-text">多个块级元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多个块级元素（使用-flexbox-布局来解决）"><span class="toc-text">多个块级元素（使用 flexbox 布局来解决）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#垂直居中"><span class="toc-text">垂直居中</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#单行的内联元素"><span class="toc-text">单行的内联元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多行的内联元素"><span class="toc-text">多行的内联元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#已知高度的块级元素"><span class="toc-text">已知高度的块级元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#未知高度的块级元素"><span class="toc-text">未知高度的块级元素</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#水平垂直居中"><span class="toc-text">水平垂直居中</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#已知高度和宽度的元素"><span class="toc-text">已知高度和宽度的元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#未知高度和宽度的元素"><span class="toc-text">未知高度和宽度的元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用-flexbox-布局来解决"><span class="toc-text">使用 flexbox 布局来解决</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-css居中" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">css居中</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.12.08</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Emon0526</span>
+        </span>
+      
+
+      
+
+
+      
+
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>开发过程中，经常会遇到需要居中（水平居中、垂直居中、水平 + 垂直居中）的情况。</p>
+<p>主要有以下几种：</p>
+<ol>
+<li>水平居中：内联元素（inline）</li>
+<li>水平居中：单个块级元素（block）</li>
+<li>水平居中：多个块级元素</li>
+<li>水平居中：多个块级元素（使用 flexbox 布局来解决）</li>
+<li>垂直居中：单行的内联元素</li>
+<li>垂直居中：多行的内联元素</li>
+<li>垂直居中：已知高度的块级元素</li>
+<li>垂直居中：未知高度的块级元素</li>
+<li>水平垂直居中：已知高度和宽度的元素</li>
+<li>水平垂直居中：未知高度和宽度的元素</li>
+<li>水平垂直居中：使用 flexbox 布局来解决</li>
+</ol>
+<h1 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h1><h2 id="内联元素"><a href="#内联元素" class="headerlink" title="内联元素"></a>内联元素</h2><p>首先使用一个 block 元素作为将该 inline 的父元素，然后为该 block 元素添加一个居中属性即可</p>
+<blockquote>
+<p>适用元素：文字，链接，及其其它 inline 或者 inline-* 类型元素（如 inline-block，inline-table，inline-flex）</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/* 注意是为 父元素 添加以下属性 */</div><div class="line">.parent-center &#123; </div><div class="line">	text-align: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="单个块级元素"><a href="#单个块级元素" class="headerlink" title="单个块级元素"></a>单个块级元素</h2><p>只需要设置左右外边距（即 margin-left, margin-right）为 auto 即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.center &#123; </div><div class="line">	/* 上下外边距可以根据需要自行调整 */ </div><div class="line">	margin: 0px auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="多个块级元素"><a href="#多个块级元素" class="headerlink" title="多个块级元素"></a>多个块级元素</h2><p>如果有多个块级元素需要水平排列，可以这样做：</p>
+<p>将每个块级元素的 display属性 设置为 inline-block，再把 父元素 的 text-align属性 设置为 center<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.parent-center &#123; </div><div class="line">	text-align: center;</div><div class="line">&#125;</div><div class="line">.center &#123; </div><div class="line">	display: inline-block;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="多个块级元素（使用-flexbox-布局来解决）"><a href="#多个块级元素（使用-flexbox-布局来解决）" class="headerlink" title="多个块级元素（使用 flexbox 布局来解决）"></a>多个块级元素（使用 flexbox 布局来解决）</h2><p>只需为 父元素 设置好 display 及 justify-content 属性即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.parent-center &#123; </div><div class="line">	display: flex; </div><div class="line">	justify-content: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="垂直居中"><a href="#垂直居中" class="headerlink" title="垂直居中"></a>垂直居中</h1><h2 id="单行的内联元素"><a href="#单行的内联元素" class="headerlink" title="单行的内联元素"></a>单行的内联元素</h2><p>要将内联元素（inline, inline-* 等元素）垂直居中，只需将该元素的 height 和 line-height 都设置为 父元素 的高度即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.center &#123; </div><div class="line">	/* 假设父元素高度为 180px，则将该内联元素的高度及行高也设置为 180px */ </div><div class="line">	height: 180px; </div><div class="line">	line-height: 180px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="多行的内联元素"><a href="#多行的内联元素" class="headerlink" title="多行的内联元素"></a>多行的内联元素</h2><p>设置父元素的display及vertical-align样式即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.parent-center &#123; display: table-cell; vertical-align: middle;&#125;</div></pre></td></tr></table></figure>
+<h2 id="已知高度的块级元素"><a href="#已知高度的块级元素" class="headerlink" title="已知高度的块级元素"></a>已知高度的块级元素</h2><p>设置好以下属性即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">	.center &#123; </div><div class="line">	height: 120px; </div><div class="line">	position: absolute; </div><div class="line">	padding: 0; </div><div class="line">	top: 50%; </div><div class="line">	margin-top: -60px; /* 高度除以2的负数，如果没有使用 box-sizing: border-box; 要计算上border和padding */</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="未知高度的块级元素"><a href="#未知高度的块级元素" class="headerlink" title="未知高度的块级元素"></a>未知高度的块级元素</h2><p>与已知高度的块级元素的垂直居中类似，只是使用transform代替margin-top即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">	.center &#123; </div><div class="line">	position: absolute; </div><div class="line">	top: 50%; </div><div class="line">	transform: translateY(-50%);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="水平垂直居中"><a href="#水平垂直居中" class="headerlink" title="水平垂直居中"></a>水平垂直居中</h1><h2 id="已知高度和宽度的元素"><a href="#已知高度和宽度的元素" class="headerlink" title="已知高度和宽度的元素"></a>已知高度和宽度的元素</h2><p>与已知高度的块级元素的垂直居中类似，只是加多了left及margin-left<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.center &#123; </div><div class="line">	width: 160px; </div><div class="line">	height: 100px; </div><div class="line">	position: absolute; </div><div class="line">	top: 50%; </div><div class="line">	left: 50%; </div><div class="line">	margin-top: -50px; /* height 的一半的负值 */ </div><div class="line">	margin-left: -80px; /* width 的一半的负值 */</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="未知高度和宽度的元素"><a href="#未知高度和宽度的元素" class="headerlink" title="未知高度和宽度的元素"></a>未知高度和宽度的元素</h2><p>与未知高度的块级元素的垂直居中类似，只是加多了left及transform-x值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.center &#123; </div><div class="line">	position: absolute; </div><div class="line">	top: 50%; </div><div class="line">	left: 50%; </div><div class="line">	transform: translate(-50%, -50%);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="使用-flexbox-布局来解决"><a href="#使用-flexbox-布局来解决" class="headerlink" title="使用 flexbox 布局来解决"></a>使用 flexbox 布局来解决</h2><p>对父元素做以下设置即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.parent-center &#123; </div><div class="line">	display: flex; </div><div class="line">	justify-content: center; </div><div class="line">	align-items: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+    
+  </div>
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫请我喝咖啡</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/ali.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2017/09/21/title/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="hide pull-right" href="/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+
+
+
+    
+
+    
+	
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
