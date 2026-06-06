@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Remotion vs HyperFrames 命令速查 | 奔跑的一楠</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="前置操作：两个工具都需要先执行 unset NODE_OPTIONS  Remotion（React &#x2F; TypeScript）核心命令   命令 用途    npx remotion studio src&#x2F;index.ts 启动预览 Studio（热重载，默认 localhost:3000）   npx remotion render src&#x2F;index.ts &lt;组合名&gt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Remotion vs HyperFrames 命令速查">
+<meta property="og:url" content="https://emon0526.github.io/2026/06/06/remotion-vs-hyperframes/index.html">
+<meta property="og:site_name" content="奔跑的一楠">
+<meta property="og:description" content="前置操作：两个工具都需要先执行 unset NODE_OPTIONS  Remotion（React &#x2F; TypeScript）核心命令   命令 用途    npx remotion studio src&#x2F;index.ts 启动预览 Studio（热重载，默认 localhost:3000）   npx remotion render src&#x2F;index.ts &lt;组合名&gt;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-06-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-06-05T23:58:32.904Z">
+<meta property="article:author" content="Emon0526">
+<meta property="article:tag" content="Remotion">
+<meta property="article:tag" content="HyperFrames">
+<meta property="article:tag" content="视频">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="奔跑的一楠" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">奔跑的一楠</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://emon0526.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-remotion-vs-hyperframes" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/06/06/remotion-vs-hyperframes/" class="article-date">
+  <time class="dt-published" datetime="2026-06-05T16:00:00.000Z" itemprop="datePublished">2026-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Remotion vs HyperFrames 命令速查
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>前置操作：两个工具都需要先执行 <code>unset NODE_OPTIONS</code></p>
+</blockquote>
+<h2 id="Remotion（React-TypeScript）"><a href="#Remotion（React-TypeScript）" class="headerlink" title="Remotion（React &#x2F; TypeScript）"></a>Remotion（React &#x2F; TypeScript）</h2><h3 id="核心命令"><a href="#核心命令" class="headerlink" title="核心命令"></a>核心命令</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>npx remotion studio src/index.ts</code></td>
+<td>启动预览 Studio（热重载，默认 <code>localhost:3000</code>）</td>
+</tr>
+<tr>
+<td><code>npx remotion render src/index.ts &lt;组合名&gt; out.mp4</code></td>
+<td>渲染为 MP4</td>
+</tr>
+<tr>
+<td><code>npx remotion still src/index.ts &lt;组合名&gt; out.png</code></td>
+<td>渲染单帧截图</td>
+</tr>
+<tr>
+<td><code>npx remotion compositions src/index.ts</code></td>
+<td>列出所有可用组合</td>
+</tr>
+<tr>
+<td><code>npx remotion benchmark src/index.ts &lt;组合名&gt;</code></td>
+<td>性能基准测试</td>
+</tr>
+<tr>
+<td><code>npx remotion bundle src/index.ts</code></td>
+<td>打包为 Web 部署</td>
+</tr>
+</tbody></table>
+<h3 id="常用渲染参数"><a href="#常用渲染参数" class="headerlink" title="常用渲染参数"></a>常用渲染参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>--fps=30</code></td>
+<td>帧率</td>
+<td>30</td>
+</tr>
+<tr>
+<td><code>--codec=h264</code></td>
+<td>编码器</td>
+<td>h264</td>
+</tr>
+<tr>
+<td><code>--codec=h265</code></td>
+<td>H.265 编码</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--codec=vp8</code></td>
+<td>VP8 (WebM)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--codec=vp9</code></td>
+<td>VP9 (WebM)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--codec=prores</code></td>
+<td>Apple ProRes</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--quality=80</code></td>
+<td>CRF 质量（0-100）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--scale=0.5</code></td>
+<td>输出缩放比例</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>--jpeg-quality=90</code></td>
+<td>序列帧 JPEG 质量</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--concurrency=4</code></td>
+<td>并行渲染线程数</td>
+<td>CPU 核数</td>
+</tr>
+<tr>
+<td><code>--enforce-audio-track</code></td>
+<td>强制包含音轨</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3 id="倒计时项目渲染示例"><a href="#倒计时项目渲染示例" class="headerlink" title="倒计时项目渲染示例"></a>倒计时项目渲染示例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> remotion-countdown</span><br><span class="line"><span class="built_in">unset</span> NODE_OPTIONS</span><br><span class="line">npx remotion render src/index.ts Countdown out/countdown.mp4</span><br></pre></td></tr></table></figure>
+
+<h2 id="HyperFrames（HTML-声明式）"><a href="#HyperFrames（HTML-声明式）" class="headerlink" title="HyperFrames（HTML &#x2F; 声明式）"></a>HyperFrames（HTML &#x2F; 声明式）</h2><h3 id="核心命令-1"><a href="#核心命令-1" class="headerlink" title="核心命令"></a>核心命令</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>npx hyperframes preview</code></td>
+<td>启动预览 Studio（热重载，默认 <code>localhost:3000</code>）</td>
+</tr>
+<tr>
+<td><code>npx hyperframes render</code></td>
+<td>渲染为 MP4（默认）</td>
+</tr>
+<tr>
+<td><code>npx hyperframes render --format webm</code></td>
+<td>渲染透明通道 WebM</td>
+</tr>
+<tr>
+<td><code>npx hyperframes render --format mov</code></td>
+<td>渲染透明通道 MOV</td>
+</tr>
+<tr>
+<td><code>npx hyperframes render --format png-sequence</code></td>
+<td>渲染 PNG 序列帧</td>
+</tr>
+<tr>
+<td><code>npx hyperframes lint</code></td>
+<td>代码校验（检查常见错误）</td>
+</tr>
+<tr>
+<td><code>npx hyperframes inspect</code></td>
+<td>可视化布局检查</td>
+</tr>
+<tr>
+<td><code>npx hyperframes snapshot</code></td>
+<td>关键帧 PNG 截图</td>
+</tr>
+<tr>
+<td><code>npx hyperframes benchmark</code></td>
+<td>性能基准测试</td>
+</tr>
+<tr>
+<td><code>npx hyperframes doctor</code></td>
+<td>系统依赖检测</td>
+</tr>
+<tr>
+<td><code>npx hyperframes init &lt;项目名&gt;</code></td>
+<td>创建新项目</td>
+</tr>
+<tr>
+<td><code>npx hyperframes compositions</code></td>
+<td>列出项目中所有组合</td>
+</tr>
+</tbody></table>
+<h3 id="常用渲染参数-1"><a href="#常用渲染参数-1" class="headerlink" title="常用渲染参数"></a>常用渲染参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>--fps=30</code></td>
+<td>帧率</td>
+<td>30</td>
+</tr>
+<tr>
+<td><code>--format=mp4</code></td>
+<td>输出格式</td>
+<td>mp4</td>
+</tr>
+<tr>
+<td><code>--format=webm</code></td>
+<td>WebM 透明通道</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--format=mov</code></td>
+<td>MOV 透明通道</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--format=png-sequence</code></td>
+<td>PNG 序列帧</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--quality=draft</code></td>
+<td>草稿画质（快）</td>
+<td>standard</td>
+</tr>
+<tr>
+<td><code>--quality=standard</code></td>
+<td>标准画质</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>--quality=high</code></td>
+<td>高质量</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--workers=auto</code></td>
+<td>并行 worker 数</td>
+<td>auto</td>
+</tr>
+<tr>
+<td><code>--resolution=1080p</code></td>
+<td>输出分辨率</td>
+<td>1080p</td>
+</tr>
+<tr>
+<td><code>--resolution=4k</code></td>
+<td>4K 分辨率</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--docker</code></td>
+<td>Docker 容器化渲染</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--strict</code></td>
+<td>lint 错误时阻断渲染</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>-o out.mp4</code></td>
+<td>指定输出文件路径</td>
+<td>自动命名</td>
+</tr>
+<tr>
+<td><code>--variables=&#39;&#123;&quot;title&quot;:&quot;Hello&quot;&#125;&#39;</code></td>
+<td>传入变量</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3 id="倒计时项目渲染示例-1"><a href="#倒计时项目渲染示例-1" class="headerlink" title="倒计时项目渲染示例"></a>倒计时项目渲染示例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> hyperframes-countdown</span><br><span class="line"><span class="built_in">unset</span> NODE_OPTIONS</span><br><span class="line">npx hyperframes render</span><br></pre></td></tr></table></figure>
+
+<h2 id="两者对比"><a href="#两者对比" class="headerlink" title="两者对比"></a>两者对比</h2><table>
+<thead>
+<tr>
+<th>维度</th>
+<th>Remotion</th>
+<th>HyperFrames</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>语言</strong></td>
+<td>React + TypeScript</td>
+<td>HTML + 声明式 <code>data-*</code> 属性</td>
+</tr>
+<tr>
+<td><strong>动画引擎</strong></td>
+<td><code>useCurrentFrame()</code> + CSS</td>
+<td>GSAP + 声明式属性</td>
+</tr>
+<tr>
+<td><strong>预览命令</strong></td>
+<td><code>studio</code></td>
+<td><code>preview</code></td>
+</tr>
+<tr>
+<td><strong>渲染命令</strong></td>
+<td><code>render</code> → 指定入口+组合名</td>
+<td><code>render</code> → 自动找 index.html</td>
+</tr>
+<tr>
+<td><strong>帧率控制</strong></td>
+<td>代码 <code>calculateMetadata()</code> 或 CLI <code>--fps</code></td>
+<td>CLI <code>--fps</code></td>
+</tr>
+<tr>
+<td><strong>最少文件数</strong></td>
+<td>3-5 个（tsx + config）</td>
+<td>1 个 HTML 即可</td>
+</tr>
+<tr>
+<td><strong>透明度输出</strong></td>
+<td>需额外配置</td>
+<td><code>--format webm/mov</code> 原生支持</td>
+</tr>
+<tr>
+<td><strong>云端渲染</strong></td>
+<td>Remotion Lambda</td>
+<td><code>hyperframes cloud</code> &#x2F; <code>lambda</code></td>
+</tr>
+<tr>
+<td><strong>热重载</strong></td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong>版本（本机）</strong></td>
+<td>remotion 4.0.389</td>
+<td>hyperframes 0.6.72</td>
+</tr>
+</tbody></table>
+<h2 id="本机注意事项"><a href="#本机注意事项" class="headerlink" title="本机注意事项"></a>本机注意事项</h2><ul>
+<li>两个工具运行前都需要 <code>unset NODE_OPTIONS</code>（系统注入了 <code>--use-system-ca</code>，与托管 Node 不兼容）</li>
+<li>一劳永逸方案：在 <code>~/.zshrc</code> 末尾添加 <code>unset NODE_OPTIONS</code></li>
+<li>ffmpeg 使用 <code>~/.local/bin/ffmpeg</code>（静态版 v8.1.1），Homebrew 版（v7.1.1）依赖已损坏但不影响使用</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://emon0526.github.io/2026/06/06/remotion-vs-hyperframes/" data-id="cmq1l5g9u0002tofoap30evi3" data-title="Remotion vs HyperFrames 命令速查" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HyperFrames/" rel="tag">HyperFrames</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Remotion/" rel="tag">Remotion</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%A7%86%E9%A2%91/" rel="tag">视频</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/12/08/css%E5%B1%85%E4%B8%AD/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">css居中</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/HyperFrames/" rel="tag">HyperFrames</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Remotion/" rel="tag">Remotion</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A7%86%E9%A2%91/" rel="tag">视频</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/HyperFrames/" style="font-size: 10px;">HyperFrames</a> <a href="/tags/Remotion/" style="font-size: 10px;">Remotion</a> <a href="/tags/%E8%A7%86%E9%A2%91/" style="font-size: 10px;">视频</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/06/">六月 2026</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/06/06/remotion-vs-hyperframes/">Remotion vs HyperFrames 命令速查</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/08/css%E5%B1%85%E4%B8%AD/">css居中</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/13/ES5%E6%95%B0%E7%BB%84%E6%96%B0%E5%A2%9E%E6%96%B9%E6%B3%95/">ES5数组新增方法</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/13/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%9A%84%E5%AE%9E%E7%8E%B0/">快速排序的实现</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/13/%E5%A4%96%E8%BE%B9%E8%B7%9D%E5%90%88%E5%B9%B6/">外边距合并</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 Emon0526<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

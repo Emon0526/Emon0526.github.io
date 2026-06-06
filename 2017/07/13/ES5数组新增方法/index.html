@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>ES5数组新增方法 | 奔跑的一楠</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="早在很久之前就看到有人提出lodash underscore 这类的lib可能会被淘汰掉在ES5中，数组新增了以下方法，其参数都是 function 类型：   forEach map filter indexOf reduce  forEach 循环这个方法很像jq中的ecah() 123$.each([], function(index, value, array) &#123;    &#x2F;&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES5数组新增方法">
+<meta property="og:url" content="https://emon0526.github.io/2017/07/13/ES5%E6%95%B0%E7%BB%84%E6%96%B0%E5%A2%9E%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="奔跑的一楠">
+<meta property="og:description" content="早在很久之前就看到有人提出lodash underscore 这类的lib可能会被淘汰掉在ES5中，数组新增了以下方法，其参数都是 function 类型：   forEach map filter indexOf reduce  forEach 循环这个方法很像jq中的ecah() 123$.each([], function(index, value, array) &#123;    &#x2F;&#x2F;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-07-12T23:30:00.000Z">
+<meta property="article:modified_time" content="2026-06-05T23:53:54.217Z">
+<meta property="article:author" content="Emon0526">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="奔跑的一楠" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">奔跑的一楠</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://emon0526.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ES5数组新增方法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2017/07/13/ES5%E6%95%B0%E7%BB%84%E6%96%B0%E5%A2%9E%E6%96%B9%E6%B3%95/" class="article-date">
+  <time class="dt-published" datetime="2017-07-12T23:30:00.000Z" itemprop="datePublished">2017-07-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      ES5数组新增方法
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>早在很久之前就看到有人提出lodash underscore 这类的lib可能会被淘汰掉<br>在ES5中，数组新增了以下方法，其参数都是 function 类型：</p>
+</blockquote>
+<ul>
+<li>forEach</li>
+<li>map</li>
+<li>filter</li>
+<li>indexOf</li>
+<li>reduce</li>
+</ul>
+<h1 id="forEach-循环"><a href="#forEach-循环" class="headerlink" title="forEach 循环"></a>forEach 循环</h1><p>这个方法很像jq中的ecah()</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$.each([], function(index, value, array) &#123;</span><br><span class="line">    // ...</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>forEach 的 function 回调 有三个参数：<br>第 1 个是遍历的数组内容<br>第 2 个是对应的数组索引<br>第 3 个是数组本身</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[].forEach(function(value, index, array) &#123;</span><br><span class="line">    // ...</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是第 1 个和第 2 个参数正好是相反的。</p>
+<p>数组求和的实现</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var sum = 0;</span><br><span class="line"></span><br><span class="line">[1, 2, 3, 4].forEach(function (item, index, array) &#123;</span><br><span class="line">  console.log(array[index] == item); // true</span><br><span class="line">  sum += item;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">alert(sum); // 10</span><br></pre></td></tr></table></figure>
+
+<h1 id="map-映射"><a href="#map-映射" class="headerlink" title="map 映射"></a>map 映射</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[].map(function(value, index, array)&#123;</span><br><span class="line">    //...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>参数和forEach()类似</p>
+<p>数组平方</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var data = [1, 2, 3, 4];</span><br><span class="line"></span><br><span class="line">var arrayOfSquares = data.map(function (item) &#123;</span><br><span class="line">  return item * item;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">alert(arrayOfSquares);// 1, 4, 9, 16</span><br></pre></td></tr></table></figure>
+
+<p>回调函数需要有return</p>
+<p>#filter 过滤</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[].filter(function(value, index, array)&#123;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>返回数组中大于10的数字组成新数组</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[1,2,3,4,5,6,7,8,9,10,11,12,13].filter(function(e)&#123;</span><br><span class="line">    return e &gt; 10;</span><br><span class="line">&#125;)</span><br><span class="line">//[11,12,13]</span><br></pre></td></tr></table></figure>
+
+<p>#indexOf()</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[].indexOf(function()&#123;</span><br><span class="line">//...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>和字符串的indexOf方法类似</p>
+<p>返回数组的整数索引值，如果没有找到，返回-1</p>
+<p>判断一个元素是否在数组里，不在则更新数组</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function updateArr(nums, num) &#123;</span><br><span class="line">        if (nums.indexOf(num) == -1) &#123;</span><br><span class="line">            nums.push(num);</span><br><span class="line">            console.log(&#x27;新数组为 : &#x27; + nums);</span><br><span class="line">        &#125; else if (nums.indexOf(num) &gt; -1) &#123;</span><br><span class="line">            console.log(num + &#x27; 已存在.&#x27;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    var nums = [1];</span><br><span class="line">    updateArr(nums, 1) //1 已存在.</span><br><span class="line">    updateArr(nums, 2) //新数组为 : 1,2</span><br></pre></td></tr></table></figure>
+
+<p>#reduce 减少</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[].reduce(function()&#123;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>reduce()方法回调函数中有四个参数<br>之前值、当前值、索引值以及数组本身</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var total = [0, 1, 2, 3].reduce(function(sum, value) &#123;</span><br><span class="line">  return sum + value;</span><br><span class="line">&#125;, 0);</span><br><span class="line">// total is 6</span><br><span class="line"></span><br><span class="line">var flattened = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) &#123;</span><br><span class="line">  return a.concat(b);</span><br><span class="line">&#125;, []);</span><br><span class="line">// flattened is [0, 1, 2, 3, 4, 5]</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://emon0526.github.io/2017/07/13/ES5%E6%95%B0%E7%BB%84%E6%96%B0%E5%A2%9E%E6%96%B9%E6%B3%95/" data-id="cmq1l5g9r0000tofo75iw3rrc" data-title="ES5数组新增方法" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/12/08/css%E5%B1%85%E4%B8%AD/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          css居中
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/07/13/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%9A%84%E5%AE%9E%E7%8E%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">快速排序的实现</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/HyperFrames/" rel="tag">HyperFrames</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Remotion/" rel="tag">Remotion</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A7%86%E9%A2%91/" rel="tag">视频</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/HyperFrames/" style="font-size: 10px;">HyperFrames</a> <a href="/tags/Remotion/" style="font-size: 10px;">Remotion</a> <a href="/tags/%E8%A7%86%E9%A2%91/" style="font-size: 10px;">视频</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/06/">六月 2026</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/06/06/remotion-vs-hyperframes/">Remotion vs HyperFrames 命令速查</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/08/css%E5%B1%85%E4%B8%AD/">css居中</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/13/ES5%E6%95%B0%E7%BB%84%E6%96%B0%E5%A2%9E%E6%96%B9%E6%B3%95/">ES5数组新增方法</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/13/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%9A%84%E5%AE%9E%E7%8E%B0/">快速排序的实现</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/13/%E5%A4%96%E8%BE%B9%E8%B7%9D%E5%90%88%E5%B9%B6/">外边距合并</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 Emon0526<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
